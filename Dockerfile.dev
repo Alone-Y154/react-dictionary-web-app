@@ -1,0 +1,13 @@
+# for development env
+
+FROM node:alpine3.10
+
+WORKDIR /dictionary-web-app
+
+COPY ./package.json /dictionary-web-app
+
+RUN npm install
+
+COPY . /dictionary-web-app
+
+CMD [ "npm","start" ]
